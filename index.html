@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niesamowity kalkulator BMI </title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    <script>
+        function oblicz() {
+            var waga = document.getElementById("waga").value;
+            var wzrost = document.getElementById("wzrost").value;
+            var bmi = waga/(wzrost*wzrost);
+            document.getElementById("wynik").innerHTML=(bmi*10000).toFixed();
+
+        }
+    </script>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+    <h1> Oblicz swoje BMI < 3  </h1>
+    <h2> UWAGA!!!! BMI wyłącznie dla osób dorosłych</h2>
+    <br>
+    <label for "waga"> Podaj swoją wagę: </label>
+    <input type="number" id="waga" value=0 dir="rtl">
+    <br>
+    <label for "wzrost"> Podaj swój wzrost: </label>
+    <input type="number" id="wzrost" value=0 dir="rtl">
+    <br>
+    <input type="button" value=" Oblicz BMI" onclick="oblicz()">
+    <br>
+    <div id="wynik"> Tu będzie obliczone BMI</div>
+</body>
+</html>
